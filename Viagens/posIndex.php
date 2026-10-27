@@ -11,12 +11,13 @@
     $cpf = $_POST['cpf'];
     $Tel = $_POST['tel'];
     $Email = $_POST['email'];
+    $password1 = $_POST['password1'];
 
     $_SESSION['name'] = $Name;
     $_SESSION['cpf'] = $cpf;
     $_SESSION['tel'] = $Tel;
     $_SESSION['email'] = $Email;
-
+    $_SESSION['password1'] = $password1;
     
 ?>
 
@@ -50,7 +51,7 @@
 
                 $pesquisaCPF = mysqli_query($conexao,
                     "SELECT CPF
-                    FROM cliente
+                    FROM usuarios
                     WHERE CPF = '$cpf' "
                 );
 
@@ -69,8 +70,8 @@
 
                     $FormCliente = mysqli_query(
                     $conexao,
-                    "INSERT INTO cliente(Nome_Cliente,Telefone,Email,CPF)
-                    VALUES ('$Name', '$Tel', '$Email', '$cpf') "
+                    "INSERT INTO usuarios(Nome_Cliente,Telefone,Email,CPF, Senha)
+                    VALUES ('$Name', '$Tel', '$Email', '$cpf', '$password1') "
                     );
 
                     // Obtém o ID que acabou de ser gerado
