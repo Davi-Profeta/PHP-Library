@@ -4,7 +4,7 @@
     include_once("conexao.php");
 
     $Name = $_POST['name'];
-    $CPF = $_POST['cpf'];
+    $Senha = $_POST['senha'];
 
 
 ?>
@@ -39,8 +39,8 @@
 
                 
                 $consultarLogin = mysqli_query($conexao,
-                "SELECT * FROM cliente
-                WHERE Nome_Cliente = '$Name' AND  CPF = '$CPF' ;");
+                "SELECT * FROM usuarios
+                WHERE Nome_Cliente = '$Name' AND  Senha = '$Senha' ;");
 
                 if(mysqli_num_rows($consultarLogin) >= 1){
                     
@@ -60,9 +60,14 @@
 
                     };
 
+                    if($Name === "Administrador" && $Senha === 123456){
+                        header("Location: ../ADM/index.html");
+                    } else {
+                        
+                        header("Location: index.php");
+                        exit;
+                    }
 
-                    header("Location: index.php");
-                    exit;
 
                 } else {
 
