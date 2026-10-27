@@ -60,8 +60,8 @@
 
                     };
 
-                    if($Name === "Administrador" && $Senha === 123456){
-                        header("Location: ../ADM/index.html");
+                    if($Name == "Administrador" && $Senha == 123456){
+                        header("Location: adm/index.html");
                     } else {
                         
                         header("Location: index.php");
