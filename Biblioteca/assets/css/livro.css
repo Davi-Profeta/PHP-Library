@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 98.5%;
+}
+
+:root{
+    --fundo: #FFF4E0;
+    --sidebar: #FFE4C4;
+    --texto: #3B2A20;
+    --borda: #6B4A35;
+    --destaque: #2F5D50;
+    --perigo: #8B2E3C;
+    --ouro: #B8892F;
+}
+
+header{
+    margin: 1rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border: solid 2px var(--borda);
+    background-color: var(--ouro);
+    padding-left: 10px;
+    color: var(--texto);
+}
+
+main{
+    background-color: var(--fundo);
+    min-height: 84.5vh;   /* era height */
+}
+
+.container{
+    margin: 1rem;
+    display: flex;
+    min-height: 99%;      
+    align-items: flex-start;   
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border: solid 2px var(--borda);
+}
+
+.form1{
+    margin: 0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px var(--borda);
+    border-radius: 15px;
+    background-color: var(--ouro);
+    width: 30%;
+    height: auto;        
+    color: var(--texto);
+}
+
+.form2{
+    margin: 0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px var(--borda);
+    border-radius: 15px;
+    background-color: var(--ouro);
+    width: 30%;
+    height: auto;         /* remove height: 85% e 25% */
+    color: var(--texto);
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.ipt{
+    width: 12rem;
+    height: 1.5rem;
+    margin-top: 0.3rem;
+    border: solid 2px var(--borda);
+}
+
+#btn{
+    width: 8rem;
+    height: 1.8rem;
+    border: solid 2px var(--borda);
+    border-radius: 8px;
+    transition: 0.5s ease-in-out;
+}
+#btn:hover{
+    cursor: pointer;
+    color: var(--fundo);
+    transform: scale(103%);
+    background-color: var(--destaque);
+    border: solid 2px var(--destaque);
+}
+
+#gen{
+    margin-top: 1.5rem;
+}

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo: #FFF4E0;
+    --sidebar: #FFE4C4;
+    --texto: #3B2A20;
+    --borda: #6B4A35;
+    --destaque: #2F5D50;
+    --perigo: #8B2E3C;
+    --ouro: #B8892F;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sidebar);
+}
+
+.topo{
+    height: 20vh;
+}
+
+.topo img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.aba{
+    width: 8%;
+    height: 100%;
+    border: solid 3px var(--borda);
+    background-color: var(--sidebar);
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+}
+
+.viem{
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.viem:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.icons{
+    width: 2.5rem;
+    height: 2.8rem;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-left: 1rem;
+}
+
+.text{
+    width: 0;
+    margin-left: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: width 0.4s ease-in-out, margin-left 0.4s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.aba:hover .text{
+    width: 180px;
+    margin-left: 0.8rem;
+    opacity: 1;
+}
+
+.aba a{
+    text-decoration: none;
+    color: black;
+}
+
+.conteudo{
+    height: 100%;
+    width: 90%;
+    flex: 1;
+    background-color: var(--fundo);
+}
+
+#iframe{
+    width: 100%;
+    height: 99.3%;
+}
