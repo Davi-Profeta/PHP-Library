@@ -1,0 +1,259 @@
+
+:root {
+  --azul-escuro: #12324a;
+  --azul: #1f6f8b;
+  --azul-claro: #e6f1f5;
+  --amarelo: #f2b134;
+  --fundo: #f5f7f8;
+  --branco: #ffffff;
+  --texto: #1d2b36;
+  --texto-suave: #5b6b76;
+  --borda: #d3dde3;
+  --vermelho: #b3382c;
+  --raio: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+
+header {
+  width: 100%;
+  background: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 36px 20px 32px;
+  border-bottom: 4px solid var(--amarelo);
+  margin-bottom: 28px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+header h2,
+header h3 {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #cfe0ea;
+}
+
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 0 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--azul-escuro);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  padding: 10px 20px;
+  border-radius: var(--raio);
+  font-weight: 600;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+
+nav a:hover {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: var(--branco);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.cadastro,
+.quadro,
+.quadro-cancelamento {
+  width: 100%;
+  max-width: 480px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 28px;
+  margin: 0 16px 20px;
+}
+
+.quadro-cancelamento {
+  max-width: 960px;
+}
+
+.cadastro h4 {
+  margin: 0 0 20px;
+  font-size: 1.1rem;
+  color: var(--azul-escuro);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--texto);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+input:focus,
+select:focus,
+button:focus-visible,
+nav a:focus-visible,
+table a:focus-visible {
+  outline: 3px solid rgba(31, 111, 139, 0.35);
+  outline-offset: 1px;
+  border-color: var(--azul);
+}
+
+.quadro-cancelamento form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quadro-cancelamento input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  width: auto;
+}
+
+button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--branco);
+  background: var(--azul);
+  border: none;
+  border-radius: var(--raio);
+  padding: 11px 22px;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: var(--azul-escuro);
+}
+
+form button[type="submit"] {
+  margin-top: 18px;
+}
+
+.quadro-cancelamento form button {
+  margin-top: 0;
+}
+
+body > a {
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+body > a button {
+  background: transparent;
+  color: var(--azul-escuro);
+  border: 1px solid var(--azul-escuro);
+}
+
+body > a button:hover {
+  background: var(--azul-escuro);
+  color: var(--branco);
+}
+
+
+table {
+  width: calc(100% - 32px);
+  max-width: 960px;
+  margin: 0 16px 24px;
+  border-collapse: collapse;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.quadro-cancelamento table {
+  width: 100%;
+  margin: 0;
+}
+
+th {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+td {
+  padding: 11px 14px;
+  border-top: 1px solid var(--borda);
+}
+
+tr:nth-child(even) td {
+  background: var(--azul-claro);
+}
+
+table a {
+  color: var(--vermelho);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+body > h3,
+.quadro-cancelamento > h3 {
+  color: var(--texto-suave);
+  text-align: center;
+}

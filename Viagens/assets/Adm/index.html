@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Company</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Boas Vindas a Travel Company</h1>
+        <h2>Temos agendamentos para todos os Estados do BRASIL</h2>
+    </header>
+
+    <nav>   
+        <a href="assets/php/consulta.php">Consultar Viagens</a>
+        <a href="assets/php/agendar.php">Agendar Viagens</a>
+        <a href="assets/php/cancelar.php">Cancelar Viagens</a>
+    </nav>
+    <main>
+        <div class="cadastro">
+            <h4>Faça seu cadastro para realizar as opções acima.</h4>
+            <form action="assets/php/cad.php" method="post">
+                <label for="">Nome: </label>
+                <input type="text" name="nome" placeholder="Ex: Maria Silva" maxlength="50" required>
+
+                <label for="">CPF: </label>
+                <input type="text" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+
+                <label for="">Telefone: </label>
+                <input type="tel" name="telefone" placeholder="(11) 99999-9999" maxlength="12" required>
+
+                <label for="">Endereço: </label>
+                <input type="text" name="endereco" placeholder="Ex: Av. Paulista, 1000 - Apto 42" maxlength="70" required>
+
+                <button type="submit" value="cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
