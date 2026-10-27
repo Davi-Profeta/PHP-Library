@@ -9,6 +9,8 @@
     --road:#f2b705;
     --road-dark:#d9a304;
     --muted:#5b6f76;
+    --danger:#c0392b;
+    --danger-dark:#a32f23;
     --display:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
 }
 
@@ -150,7 +152,7 @@ main{
 }
 
 .container{
-    width:min(100%,640px);
+    width:min(100%,1100px);
     background:#fff;
     border:1px solid var(--line);
     border-radius:14px;
@@ -159,17 +161,32 @@ main{
 }
 
 .titleCan{
-    padding:1.5rem 2rem;
+    position:relative;
+    padding:2rem 2.5rem;
     border-bottom:1px solid var(--line);
     font-family:var(--display);
-    font-size:1.5rem;
+    font-size:1.9rem;
+}
+
+.titleCan h3{
+    font-size:inherit;
+    font-weight:700;
+}
+
+.titleCan::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:6px;
+    background:var(--road);
 }
 
 .pesquisa{ display:flex; }
 
 .filters{
     width:100%;
-    padding:1.5rem 2rem 2rem;
+    padding:2rem 2.5rem 2.5rem;
+    overflow-x:auto;
 }
 
 form{
@@ -190,6 +207,87 @@ form input{ margin-bottom:.75rem; }
     padding:1rem;
     border-left:1px solid var(--line);
 }
+
+/* ===================== Tabela de passagens ======================== */
+.filters table{
+    width:100%;
+    min-width:760px;
+    border-collapse:separate;
+    border-spacing:0;
+    border-radius:12px;
+    box-shadow:0 0 0 1px var(--line);
+    font-size:1rem;
+}
+
+.filters th{
+    padding:1rem 1.25rem;
+    background:var(--ink);
+    color:#fff;
+    border-bottom:3px solid var(--road);
+    font-family:var(--display);
+    font-weight:600;
+    font-size:.85rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-align:left;
+    white-space:nowrap;
+}
+
+.filters th:first-child{ border-top-left-radius:12px; }
+.filters th:last-child{ border-top-right-radius:12px; text-align:center; }
+
+.filters td{
+    padding:1.15rem 1.25rem;
+    border-bottom:1px solid var(--line);
+    background:#fff;
+    vertical-align:middle;
+    font-variant-numeric:tabular-nums;
+    transition:background .15s;
+}
+
+.filters tr:nth-child(even) td{ background:#f6f9fa; }
+
+.filters tr:hover td{ background:rgba(31,111,120,.10); }
+
+.filters tr:last-child td{ border-bottom:0; }
+.filters tr:last-child td:first-child{ border-bottom-left-radius:12px; }
+.filters tr:last-child td:last-child{ border-bottom-right-radius:12px; }
+
+/* origem e destino em destaque */
+.filters td:nth-child(1),
+.filters td:nth-child(2){
+    font-weight:700;
+    color:var(--teal-dark);
+}
+
+/* coluna de ação */
+.filters td:last-child{ text-align:center; }
+
+/* mensagem "nenhuma passagem" */
+.filters td[colspan]{
+    text-align:center;
+    color:var(--muted);
+    padding:2.5rem 1rem;
+}
+
+/* botão de cancelar */
+.btn-cancelar{
+    display:inline-block;
+    padding:.6rem 1.25rem;
+    border:0;
+    border-radius:8px;
+    background:var(--danger);
+    color:#fff;
+    font:inherit;
+    font-size:.9rem;
+    font-weight:700;
+    text-decoration:none;
+    cursor:pointer;
+    transition:background .15s, transform .1s;
+}
+
+.btn-cancelar:hover{ background:var(--danger-dark); }
+.btn-cancelar:active{ transform:scale(.97); }
 
 @media (max-width:640px){
     header{ padding-inline:1rem; }
