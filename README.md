@@ -122,6 +122,4 @@ Por causa do prazo curto, algumas decisões foram tomadas para entregar a tempo.
 
 ---
 
-## 👥 Autores
 
-Projeto desenvolvido em grupo para atividade do curso.
