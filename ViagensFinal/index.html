@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/cadastrar.css">
+    <title>Travel Company | Cadastrar</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="title">
+            <h1>Travel Company</h1>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="card-head">
+                <h2>Crie sua conta</h2>
+                <p>Cadastre-se para reservar suas próximas viagens.</p>
+            </div>
+
+            <form action="posIndex.php" method="post">
+
+                <div class="divInput">
+                    <label for="name">Nome</label>
+                    <input class="ipt" type="text" name="name" id="name" placeholder="Seu nome de usuário" required>
+                </div>
+
+                <div class="divInput">
+                    <label for="cpf">CPF</label>
+                    <input class="ipt" type="text" maxlength="11" name="cpf" id="cpf" placeholder="Somente números" required>
+                </div>
+
+                <div class="divInput">
+                    <label for="email">Email</label>
+                    <input class="ipt" type="email" name="email" id="email" placeholder="voce@email.com" required>
+                </div>
+
+                <div class="divInput">
+                    <label for="tel">Telefone</label>
+                    <input class="ipt" type="tel" maxlength="10" name="tel" id="tel" placeholder="DDD + número" required>
+                </div>
+
+                <div class="divInput">
+                    <label for="password1">Criar senha</label>
+                    <input class="ipt" type="password" maxlength="50" name="password1" id="password1" placeholder="Crie uma senha" required>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+
+            <div class="divider"><span>ou</span></div>
+
+            <a class="btn" href="assets/pages/login.html">Já tenho conta · Entrar</a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

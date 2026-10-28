@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastrar.css">
+    <title>Travel Company | Entrar</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="title">
+            <h1>Travel Company</h1>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="card-head">
+                <h2>Bem-vindo de volta</h2>
+                <p>Entre com seu nome e senha para continuar.</p>
+            </div>
+
+            <form action="../login.php" method="post">
+
+                <div class="divInput">
+                    <label for="name">Nome</label>
+                    <input class="ipt" type="text" name="name" id="name" placeholder="Seu nome de usuário" required>
+                </div>
+
+                <div class="divInput">
+                    <label for="senha">Senha</label>
+                    <input class="ipt" type="password" maxlength="50" name="senha" id="senha" placeholder="Sua senha" required>
+                </div>
+
+                <button type="submit">Entrar</button>
+
+            </form>
+
+            <div class="divider"><span>ou</span></div>
+
+            <a class="btn" href="../../index.html">Criar uma conta</a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
